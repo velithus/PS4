@@ -10,7 +10,7 @@ public class Calculation {
 		
             double sum = investAmt;
 		for (int i = 0; i < years; i++) {
-			double add = sum*interestRate;
+			double add = sum*(interestRate/100);
 			sum += add;
 		}
 		

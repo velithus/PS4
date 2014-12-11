@@ -1,3 +1,6 @@
+
+import ps4.Calculation;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -140,10 +143,14 @@ public class CalcGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_investFieldActionPerformed
 
     private void calculateButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButActionPerformed
-    double doubInvestAmt = Double.parseDouble(investAmt.getText());
-    int intYears = (int)(Double.parseDouble(years.getText()));
-    double doubRate = Double.parseDouble(interestRate.getText());
-    //futureValueField.setText(Calculation.calc(doubInvestAmt, intYears, doubRate));
+    // I'm not sure why I'm recieving an error here, so I just tried to finish it as if it worked
+        double doubInvestAmt, doubRate, result;
+        int intYears;
+        doubInvestAmt = Float.parseFloat(investAmt.getText());
+        intYears = (int)Float.parseFloat(years.getText());
+        doubRate = Float.parseFloat(interestRate.getText());
+        result = Calculation.calc(doubInvestAmt, intYears, doubRate);
+    futureValueField.setText(String.valueOf(result));
     }//GEN-LAST:event_calculateButActionPerformed
 
     /**
